@@ -1,0 +1,625 @@
+$whiteColor: #fff;
+
+@mixin displayFlex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@font-face {
+  font-family: '나눔고딕';
+  src: url('../../../assets/fonts/NanumGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: '나눔고딕';
+  src: url('../../../assets/fonts/NanumGothic-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: '나눔고딕';
+  src: url('../../../assets/fonts/NanumGothic-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: '인스타그램 영문폰트 빌라봉';
+  src: url('../../../assets/fonts/billabong.otf');
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(244, 244, 244);
+}
+
+header {
+  width: 100%;
+  background-color: $whiteColor;
+  box-shadow: 0 1px 3px 1px rgb(234, 234, 234);
+
+  /* ========== nav 시작 ========== */
+
+  nav {
+    @include displayFlex(space-between);
+
+    width: 65%;
+    height: 60px;
+    margin: 0 auto;
+
+    /* logo 영역 */
+
+    #logo {
+      @include displayFlex(space-around);
+
+      span {
+        display: inline-block;
+
+        width: 2px;
+        height: 25px;
+        border-right: 2px solid #222;
+        margin-top: 18px;
+      }
+
+      .icon_logo {
+        display: inline-block;
+        width: 20px;
+        margin: 20px;
+      }
+
+      .icon_logo img {
+        width: 100%;
+      }
+
+      .letter_logo {
+        display: inline-block;
+        width: 95px;
+        margin: 20px 0 20px 20px;
+      }
+
+      .letter_logo img {
+        width: 100%;
+      }
+    }
+
+    /* nav_search 영역 */
+
+    #nav_search {
+      position: relative;
+
+      input {
+        width: 200px;
+        padding: 3px;
+        margin-top: 18px;
+        border: 1px solid #aaa;
+        border-radius: 3px;
+      }
+
+      input::placeholder {
+        text-align: center;
+      }
+
+      img {
+        position: absolute;
+        left: 72px;
+        top: 22px;
+        opacity: 0.5;
+
+        width: 15px;
+      }
+    }
+
+    /* nav_icons 영역 */
+
+    #nav_icons {
+      span {
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+        margin: 17px 9px;
+      }
+
+      .red_dot {
+        width: 4px;
+        height: 4px;
+        background-color: #e20055;
+        border-radius: 50%;
+
+        position: absolute;
+        left: 2px;
+        top: 14px;
+      }
+
+      span.icon1 img {
+        width: 100%;
+      }
+
+      span.icon2 {
+        position: relative;
+      }
+
+      span.icon2 img {
+        width: 100%;
+      }
+
+      span.icon3 img {
+        width: 100%;
+      }
+
+      .btn_toLogin {
+        position: absolute;
+        top: 16px;
+        right: 280px;
+        padding: 5px 7px;
+
+        border: 2px solid #222;
+        border-radius: 7px;
+        background: #222;
+        color: $whiteColor;
+
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* ========== main 시작 ========== */
+
+main {
+  @include displayFlex(space-between);
+
+  width: 63%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+
+  /* ========== feeds 시작 ========== */
+
+  .feeds {
+    width: 700px;
+    height: auto;
+    margin-top: 57px;
+    background-color: $whiteColor;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+
+    /* post_host 영역 */
+
+    #post_host {
+      height: 55px;
+      background-color: $whiteColor;
+
+      position: relative;
+
+      .post_host_pic {
+        display: inline-block;
+        width: 31px;
+        height: 31px;
+        margin: 12px 0 0 15px;
+      }
+
+      .post_host_pic img {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .post_host_nickname {
+        display: inline-block;
+      }
+
+      .post_host_nickname span {
+        font-family: '나눔고딕';
+        font-size: 13px;
+        font-weight: 600;
+        color: #000;
+
+        position: absolute;
+        left: 60px;
+        top: 21px;
+      }
+
+      .dots {
+        display: inline-block;
+        float: right;
+        overflow: hidden;
+        margin: 16px 20px 0 0;
+      }
+
+      .dot_black {
+        display: inline-block;
+        width: 3px;
+        height: 3px;
+        margin-left: 5px;
+        background-color: #222;
+        border-radius: 50%;
+      }
+    }
+
+    /* post_pic 영역 */
+
+    #post_pic {
+      width: inherit;
+      height: 400px;
+      overflow: hidden;
+      background-color: blue;
+
+      img {
+        width: 100%;
+        translate: 0 -87px;
+      }
+    }
+
+    /* post_txt 영역 */
+
+    .post_txt_icons {
+      @include displayFlex(space-between);
+
+      width: 100%;
+      height: 100%;
+      padding-top: 11px;
+
+      .post_txt_icon_left span {
+        display: inline-block;
+        width: 22px;
+        height: 22px;
+      }
+
+      .post_txt_icon1 img {
+        width: 100%;
+        margin: 1px 2px 0 15px;
+      }
+
+      .post_txt_icon2 {
+        margin-left: 24px;
+      }
+
+      .post_txt_icon2 img {
+        width: 100%;
+      }
+
+      .post_txt_icon3 {
+        margin-left: 10px;
+      }
+
+      .post_txt_icon3 img {
+        width: 100%;
+      }
+
+      .post_txt_icon_right span {
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+      }
+
+      .post_txt_icon4 {
+        margin: 1px 12px 0 0;
+      }
+
+      .post_txt_icon4 img {
+        width: 100%;
+      }
+    }
+
+    .post_txt_comment {
+      position: relative;
+      background-color: $whiteColor;
+      padding-left: 8px;
+      padding-bottom: 7px;
+
+      a {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin: 10px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .like {
+        font-family: '나눔고딕';
+        font-size: 13px;
+        position: absolute;
+        left: 50px;
+        top: 16px;
+      }
+
+      .like .strong {
+        font-weight: 600;
+      }
+
+      .comment {
+        position: relative;
+
+        li {
+          font-family: '나눔고딕';
+          font-size: 14px;
+          margin-left: 17px;
+        }
+
+        .post_host_nickname {
+          width: 300px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        .strong {
+          font-weight: 600;
+        }
+
+        .more {
+          font-size: 14px;
+          color: #777;
+
+          position: absolute;
+          left: 325px;
+          top: 2px;
+        }
+
+        .commentor_nickname {
+          @include displayFlex(space-between);
+        }
+
+        .comment1 {
+          margin: 10px 0 7px 17px;
+          font-size: 13px;
+        }
+
+        .comment2 {
+          margin-left: 17px;
+          padding-bottom: 7px;
+          font-size: 13px;
+        }
+
+        .comment3 {
+          margin-left: 17px;
+          padding-bottom: 7px;
+          font-size: 13px;
+        }
+
+        img {
+          width: 10px;
+          height: 10px;
+          margin-right: 20px;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    .comment_window {
+      @include displayFlex(space-between);
+
+      background-color: $whiteColor;
+
+      border-top: 1px solid #eee;
+
+      input.comment_write {
+        width: 100%;
+        padding: 16px 0 15px 25px;
+        border: none;
+      }
+
+      input.comment_write::placeholder {
+        font-family: '나눔고딕';
+        color: #bbb;
+      }
+
+      input.comment_write:focus {
+        outline: none;
+      }
+
+      .publish {
+        float: right;
+        width: 50px;
+        background-color: $whiteColor;
+        border: none;
+        margin-right: 15px;
+
+        font-family: '나눔고딕';
+        font-weight: 600;
+        color: royalblue;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  /* ========== main_right 시작 ========== */
+
+  .main_right {
+    width: 400px;
+    margin: 58px 0 0 30px;
+
+    /* right_my_account_pic 영역 */
+
+    #right_my_account_pic {
+      display: flex;
+      justify-items: baseline;
+
+      a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 10px 10px 10px 0;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      /* right_my_account_txt 영역 */
+
+      .right_my_account_txt {
+        margin: 18px 0 0 5px;
+
+        p {
+          font-family: '나눔고딕';
+        }
+
+        p:first-child {
+          font-size: 14px;
+          font-weight: 600;
+        }
+
+        p:last-child {
+          font-size: 14px;
+          color: #777;
+          margin-top: 4px;
+        }
+      }
+    }
+
+    /* story_board */
+
+    #story_board {
+      width: 100%;
+      height: 240px;
+      background-color: $whiteColor;
+      margin-top: 6px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+
+      overflow: hidden;
+
+      .story_top {
+        @include displayFlex(space-between);
+
+        span {
+          margin: 20px 15px 15px 15px;
+          font-size: 14px;
+        }
+
+        span:first-child {
+          color: #777;
+        }
+      }
+
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px 0 20px;
+      }
+
+      a img {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid #e20055;
+        padding: 2px;
+      }
+
+      ul li {
+        display: flex;
+        justify-items: baseline;
+        margin-bottom: 15px;
+      }
+
+      ul li div {
+        margin-top: 3px;
+      }
+
+      ul li div p {
+        font-family: '나눔고딕';
+        font-size: 14px;
+      }
+
+      ul li div p:first-child {
+        font-weight: 600;
+      }
+
+      ul li div p:last-child {
+        color: #777;
+        margin-top: 2px;
+      }
+    }
+
+    /* recommand_board */
+
+    #recommand_board {
+      width: 100%;
+      height: 215px;
+      margin-top: 12px;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      background-color: $whiteColor;
+      overflow: hidden;
+
+      .recommand_top {
+        @include displayFlex(space-between);
+      }
+
+      .recommand_top span {
+        margin: 20px 15px 15px 15px;
+        font-size: 14px;
+      }
+
+      .recommand_top span:first-child {
+        color: #777;
+      }
+
+      a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px 0 20px;
+      }
+
+      a img {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid #e20055;
+        padding: 2px;
+      }
+
+      ul li {
+        display: flex;
+        justify-items: baseline;
+        margin-bottom: 15px;
+      }
+
+      ul li div {
+        margin-top: 3px;
+      }
+
+      ul li div p {
+        width: 140px;
+
+        font-family: '나눔고딕';
+        font-size: 14px;
+
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      ul li div p:first-child {
+        font-weight: 600;
+      }
+
+      ul li div p:last-child {
+        color: #777;
+        margin-top: 2px;
+      }
+
+      ul li span {
+        width: 37px;
+        margin-top: 14px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+        font-family: '나눔고딕';
+        font-size: 13px;
+        font-weight: 600;
+        color: royalblue;
+      }
+    }
+  }
+}

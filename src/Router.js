@@ -13,7 +13,6 @@ import PysMain from './pages/pys/Main/PysMain';
 function Router() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/" element={<BgmLogin />} />
         <Route path="/BgmMain" element={<BgmMain />} />
