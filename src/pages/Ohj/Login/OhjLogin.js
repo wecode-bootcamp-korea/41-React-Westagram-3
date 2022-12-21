@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Login() {
+function OhjLogin() {
   return <div>Login</div>;
 }
 
-export default Login;
+export default OhjLogin;
