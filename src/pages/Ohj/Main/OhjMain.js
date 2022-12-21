@@ -1,7 +1,7 @@
 import React from 'react';
 
-function Main() {
+function OhjMain() {
   return <div>Main</div>;
 }
 
-export default Main;
+export default OhjMain;

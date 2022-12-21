@@ -1,7 +1,7 @@
 import React from 'react';
 
-function PsyLogin() {
+function PysLogin() {
   return <div>Login</div>;
 }
 
-export default PsyLogin;
+export default PysLogin;

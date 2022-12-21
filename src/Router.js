@@ -7,8 +7,8 @@ import OhjLogin from './pages/ohj/Login/OhjLogin';
 import OhjMain from './pages/ohj/Main/OhjMain';
 import JcyLogin from './pages/jcy/Login/JcyLogin';
 import JcyMain from './pages/jcy/Main/JcyMain';
-import PysLogin from './pages/pys/Login/PsyLogin';
-import PysMain from './pages/pys/Main/PsyMain';
+import PysLogin from './pages/pys/Login/PysLogin';
+import PysMain from './pages/pys/Main/PysMain';
 
 function Router() {
   return (
