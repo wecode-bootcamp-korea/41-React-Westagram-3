@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from '../src/components/Nav/Nav';
 import BgmLogin from './pages/Bgm/Login/Login';
 import BgmMain from './pages/Bgm/Main/Main';
 import OhjLogin from './pages/Ohj/Login/Login';
@@ -12,6 +13,7 @@ import PysMain from './pages/Pys/Main/Main';
 function Router() {
   return (
     <BrowserRouter>
+      <Nav />
       <Routes>
         <Route path="/BgmLogin" element={<BgmLogin />} />
         <Route path="/BgmMain" element={<BgmMain />} />
