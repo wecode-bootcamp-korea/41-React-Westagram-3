@@ -15,7 +15,7 @@ function Router() {
     <BrowserRouter>
       <Nav />
       <Routes>
-        <Route path="/BgmLogin" element={<BgmLogin />} />
+        <Route path="/" element={<BgmLogin />} />
         <Route path="/BgmMain" element={<BgmMain />} />
         <Route path="/OhjLogin" element={<OhjLogin />} />
         <Route path="/OhjMain" element={<OhjMain />} />
