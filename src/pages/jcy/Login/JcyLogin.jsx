@@ -23,7 +23,7 @@ function JcyLogin() {
       <button
         className="loginBtn"
         onClick={() => {
-          navigate('./Main');
+          navigate('/JcyMain');
         }}
       >
         로그인

@@ -7,7 +7,7 @@ function JcyMain() {
     <>
       <nav className="navigation">
         <div className="frontBar">
-          <img className="insta" src="../../../assets/jcy/instagram.png" />
+          <img className="insta" src="/images/Jcy/instagram.png" />
           <div className="border_1"></div>
           <span className="LogoHead">instagram</span>
         </div>
@@ -15,9 +15,9 @@ function JcyMain() {
           <input className="search" type="text" placeholder="검색" />
         </div>
         <div className="buttonBar">
-          <img className="explore" src="../../../assets/jcy/explore.png" />
-          <img className="heart" src="../../../assets/jcy/heart.png" />
-          <img className="user_profile" src="../../../assets/jcy/profile.png" />
+          <img className="explore" src="/images/Jcy/explore.png" />
+          <img className="heart" src="/images/Jcy/heart.png" />
+          <img className="user_profile" src="/images/Jcy/profile.png" />
         </div>
       </nav>
       <div className="main">
@@ -25,41 +25,35 @@ function JcyMain() {
           <article className="article">
             <div className="user_info">
               <div className="top_left">
-                <img
-                  className="user_img"
-                  src="../../../assets/jcy/profile_1.jpg"
-                />
+                <img className="user_img" src="/images/Jcy/profile_1.jpg" />
                 <span className="user_name">
                   JangChan__0 <br />
                   <span className="user_place">snow town</span>
                 </span>
               </div>
 
-              <img className="more_Info" src="../../../assets/jcy/more.png" />
+              <img className="more_Info" src="/images/Jcy/more.png" />
             </div>
             <div className="content">
-              <img
-                className="content_IMG"
-                src="../../../assets/jcy/content_IMG.jpg"
-              />
+              <img className="content_IMG" src="/images/Jcy/content_IMG.jpg" />
             </div>
             <div className="rection">
               <div className="top">
                 <div className="left">
                   <div className="rection_Btn">
-                    <img src="../../../assets/jcy/heart (1).png" />
-                    <img src="../../../assets/jcy/speech-bubble.png" />
-                    <img src="../../../assets/jcy/share.png" />
+                    <img src="/images/Jcy/heart (1).png" />
+                    <img src="/images/Jcy/speech-bubble.png" />
+                    <img src="/images/Jcy/share.png" />
                   </div>
                 </div>
                 <div className="right">
-                  <img src="../../../assets/jcy/bookmark.png" />
+                  <img src="/images/Jcy/bookmark.png" />
                 </div>
               </div>
 
               <div className="middle">
                 <div className="rection_middle">
-                  <img src="../../../assets/jcy/profile_2.jpg" />
+                  <img src="/images/Jcy/profile_2.jpg" />
                   <b>Wecode</b>님&nbsp;
                   <b>외 10명</b>이 좋아합니다
                 </div>
@@ -91,7 +85,7 @@ function JcyMain() {
         </section>
         <aside className="main-right">
           <div className="AD">
-            <img className="AD_IMG" src="../../../assets/jcy/profile_3.jpg" />
+            <img className="AD_IMG" src="/images/Jcy/profile_3.jpg" />
 
             <div className="AD_Info">
               <div className="AD_Info_name">
