@@ -3,8 +3,9 @@ import './Login.scss';
 import '../../../styles/reset.scss';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import Router from '../../../Router';
 
-function OhjLogin() {
+function OhjLogin(props) {
   const navigate = useNavigate();
 
   return (
@@ -17,11 +18,19 @@ function OhjLogin() {
         </div>
         <div id="id_pw_window">
           <input
+            name="identy"
             className="id"
             type="text"
             placeholder="전화번호, 사용자 이름 또는 이메일"
+            onChange={props.onSaveId}
           />
-          <input className="pw" type="password" placeholder="비밀번호" />
+          <input
+            name="password"
+            className="pw"
+            type="password"
+            placeholder="비밀번호"
+            onChange={props.onSavePw}
+          />
           <button
             className="login_btn"
             onClick={() => {
