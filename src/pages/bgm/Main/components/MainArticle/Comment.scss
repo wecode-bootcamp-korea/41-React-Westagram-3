@@ -1,0 +1,13 @@
+.content {
+  display: flex;
+  align-items: center;
+
+  .comentImg {
+    width: 30px;
+    margin-right: 10px;
+  }
+  .commentName {
+    font-weight: 700;
+    margin-right: 10px;
+  }
+}
