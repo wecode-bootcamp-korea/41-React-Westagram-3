@@ -16,6 +16,18 @@ function JcyLogin() {
     setId(e.target.value);
     console.log('id', id);
   };
+
+  const active = id.includes('@') && pw.length >= 5;
+  let block;
+  let Color;
+
+  active ? (block = false) : (block = true);
+  block
+    ? (Color = { backgroundColor: '#b2dffc' })
+    : (Color = { backgroundColor: '#2aa4f5' });
+
+  // };
+
   return (
     <>
       <div className="all">
@@ -39,6 +51,8 @@ function JcyLogin() {
         </div>
         <button
           className="loginBtn"
+          disabled={block}
+          style={Color}
           onClick={() => {
             navigate('/JcyMain');
           }}
