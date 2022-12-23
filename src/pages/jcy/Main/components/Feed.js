@@ -1,14 +1,24 @@
 import { BrowserRouter, Routes } from 'react-router-dom';
 import React from 'react';
-
-// const [comment, setcomment] = useState('');
-
-// const onChange = (e) => {
-//   setcomment(e.target.value);
-// };
-// console.log(comment);
+import { useState } from 'react';
 
 const Feed = () => {
+  const [comment, setcomment] = useState(''); //1 ,3
+  const [commentArray, setcommentArray] = useState([]);
+
+  const onChange = (e) => {
+    //2
+    setcomment(e.target.value);
+  };
+  console.log(comment);
+
+  const onSubmit = (e) => {
+    //4
+    e.preventDefault(); //5
+    setcommentArray([...commentArray, comment]); //6
+    setcomment(''); //7
+  };
+
   return (
     <>
       <div className="main">
@@ -62,18 +72,25 @@ const Feed = () => {
                 </div>
                 <div className="time">
                   <b>5분&nbsp;전</b>
+                  {commentArray.map(function (a, i) {
+                    //8
+                    return <p>장찬영 {commentArray[i]}</p>; //9
+                  })}
                 </div>
               </div>
               <div className="newComment"></div>
-              {/* <form className="form" onSubmit={onChange}> */}
-              <input
-                className="comment_maker"
-                type="text"
-                placeholder="댓글 달기..."
-                // onChange={onChange}
-              />
-              <button className="commentBtn">게시</button>
-              {/* </form> */}
+              <form className="form">
+                <input
+                  className="comment_maker"
+                  type="text"
+                  placeholder="댓글 달기..."
+                  value={comment}
+                  onChange={onChange} //2
+                />
+                <button className="commentBtn" onClick={onSubmit}>
+                  게시
+                </button>
+              </form>
             </div>
           </article>
         </section>
