@@ -117,7 +117,6 @@ body {
 
   .login_btn {
     display: block;
-    // background-color: rgb(184, 199, 244);
     background-color: royalblue;
     padding: 15px 15px 36px 15px;
     margin-top: 18px;
@@ -126,6 +125,12 @@ body {
     font-weight: 600;
     color: #fff;
     cursor: pointer;
+  }
+  .login_btn:disabled {
+    background-color: rgb(184, 199, 244);
+  }
+  .login_btn:active {
+    background-color: rgb(36, 74, 189);
   }
 }
 
