@@ -1,6 +1,7 @@
 .content {
   display: flex;
   align-items: center;
+  position: relative;
 
   .comentImg {
     width: 30px;
@@ -9,5 +10,40 @@
   .commentName {
     font-weight: 700;
     margin-right: 10px;
+  }
+
+  .contentLikeTresh {
+    position: absolute;
+    right: 0px;
+    display: flex;
+    button {
+      // display: none;
+      background-color: white;
+      border: none;
+    }
+    .contentLikeTreshHeartBtn {
+      background: url(../../../../../heart.png);
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+    }
+    .contentLikeTreshHeartBtn.red {
+      background: url(../../../../../redheart.png);
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+      // background-color: red;
+      // &:disabled {
+      //   background: url(../../../../../redheart.png);
+      //   width: 16px;
+      //   height: 16px;
+      //   background-size: cover;
+      // }
+    }
+
+    img {
+      width: 16px;
+      margin-right: 4px;
+    }
   }
 }

@@ -63,7 +63,7 @@ function MainArticleBottom() {
         </div>
         <div className="commentBox">
           {contentArr.map((i, key) => (
-            <Comment i={i} key={key} />
+            <Comment i={i} key={key} contentArr={contentArr} />
           ))}
           {/* // ㄴcontentArr에 content를 넣고 맵핑하여 i를 props 한다. // ㄴComment
           컴포넌트에 i를 i로 props해주고 key값을 key로 propps 해준다. */}

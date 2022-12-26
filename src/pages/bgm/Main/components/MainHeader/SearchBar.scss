@@ -1,9 +1,6 @@
 .searchList {
-  position: absolute;
-  height: auto;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
+  display: none;
+
   button {
     background-color: white;
     border: none;
@@ -24,4 +21,11 @@
       }
     }
   }
+}
+.searchList.on {
+  position: absolute;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
 }

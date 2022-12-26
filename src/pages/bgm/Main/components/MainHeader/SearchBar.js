@@ -4,15 +4,13 @@ import './SearchBar.scss';
 const SearchBar = ({ values }) => {
   // console.log({ values }.length);
   // console.log(values.length);
-  const onOff = () => {
-    return values.length <= 0 ? false : true;
-  };
-
-  onOff();
-
+  // const onOff = () => {
+  //   return values.length <= 0 ? false : true;
+  // };
+  const onOff = values.length <= 0 ? '' : ' on';
   return (
     <div>
-      <ul className="searchList">
+      <ul className={'searchList' + onOff}>
         <button>
           <li style={{ color: 'black' }} className="searchListChild">
             <img src="images/bgm/user.png" alt="프로필사진" />
