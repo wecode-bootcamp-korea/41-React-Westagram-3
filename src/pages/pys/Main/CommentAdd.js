@@ -55,7 +55,7 @@ const CommentAdd = ({ comment, index, editCommentList }) => {
                       onClick={handleHeartClick}
                       value={heart}
                       id="comment-like-btn"
-                      src="images/like.png"
+                      src="images/pys/like.png"
                       alt="likeButton"
                     />
                   ) : (
@@ -63,7 +63,7 @@ const CommentAdd = ({ comment, index, editCommentList }) => {
                       onClick={handleHeartClick}
                       value={heart}
                       id="comment-like-btn"
-                      src="images/liked.png"
+                      src="images/pys/liked.png"
                       alt="likedButton"
                     />
                   )}

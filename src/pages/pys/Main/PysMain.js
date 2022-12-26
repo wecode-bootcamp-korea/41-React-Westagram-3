@@ -41,7 +41,7 @@ const PysMain = () => {
                     ) : (
                       <img
                         onClick={handleHeartClick}
-                        src="images/liked.png"
+                        src="images/pys/liked.png"
                         alt="likeBtn"
                       />
                     )}
