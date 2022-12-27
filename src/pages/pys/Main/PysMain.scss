@@ -38,13 +38,16 @@ footer div {
 }
 
 #feeds {
-  border: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  margin: 10px;
   width: 470px;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 #feedImg {
-  width: 471px;
-  height: 471px;
+  width: 470px;
+  height: 470px;
   margin-left: 2px;
 }
 #feedBtn {
