@@ -1,26 +1,25 @@
 /* 폼 */
 body {
-  background-color: rgb(247, 243, 243);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+  background-color: rgb(247, 243, 243);
   .lgnForm {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
     width: 348px;
     height: 400px;
+    background-color: white;
     border: 1px solid gray;
-
     border-radius: 3px;
-    flex-direction: column;
 
     .titleImg {
-      margin: 40px 0 40px 0;
       width: 175px;
       height: 51px;
+      margin: 40px 0 40px 0;
       background-size: auto;
       background-image: url(https://static.cdninstagram.com/rsrc.php/v3/y-/r/yXM3FgMdVNX.png);
       background-position: 0px -52px;
@@ -28,32 +27,31 @@ body {
     input {
       width: 250px;
       height: 40px;
-      padding-left: 5px;
       margin-bottom: 5px;
-      color: gray;
-
+      padding-left: 5px;
       border: 1px solid gray;
       border-radius: 4px;
+      color: gray;
       background-color: rgba(255, 255, 255);
     }
 
     button {
+      width: 250px;
+      height: 35px;
+      margin: 10px 0 70px 0;
       border: none;
       border-radius: 3px;
       background-color: rgb(0, 149, 246);
       color: white;
-      width: 250px;
-      height: 35px;
-      margin: 10px 0 70px 0;
       &:disabled {
         background-color: rgba(var(--d69, 0, 149, 246), 0.3);
       }
     }
 
     a {
+      color: black;
       font-size: 13px;
       text-decoration: none;
-      color: black;
     }
   }
 }

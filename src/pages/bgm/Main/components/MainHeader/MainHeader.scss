@@ -6,9 +6,9 @@ a {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid rgb(219, 219, 219);
   width: 100vw;
   height: 80px;
+  border: 1px solid rgb(219, 219, 219);
 
   .leftHead {
     display: flex;
@@ -24,14 +24,14 @@ a {
   }
   #headSearch {
     .headSearchBar {
+      display: flex;
+      flex-direction: column;
       position: relative;
       width: 400px;
       height: 40px;
       padding-left: 20px;
       border: 1px solid rgb(219, 219, 219);
       border-radius: 4px;
-      display: flex;
-      flex-direction: column;
     }
   }
 

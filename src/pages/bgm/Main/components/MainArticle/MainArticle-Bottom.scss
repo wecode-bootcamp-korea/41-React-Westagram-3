@@ -1,13 +1,12 @@
 .articleComentboxLikes ul {
   // 좋아요 , 댓글, 공유 , 저장버튼
   display: flex;
-  // margin-top: 5px;
-  padding: 0 10px 0 10px;
   height: 30px;
+  padding: 0 10px 0 10px;
   li button {
     width: 40px;
-    background-color: white;
     border: none;
+    background-color: white;
   }
   li:nth-child(4) {
     margin-left: 420px;
@@ -26,6 +25,7 @@
     align-items: center;
     height: 40px;
     font-family: 'KyoboHandwriting2021sjy';
+
     img {
       width: 30px;
       margin-right: 14px;
@@ -63,10 +63,10 @@
     // 댓글 버튼
     width: 100px;
     height: 40px;
-    background-color: white;
     color: rgb(82, 71, 203);
     border: 1px solid rgb(219, 219, 219);
     border-left: none;
+    background-color: white;
     cursor: pointer;
     &:disabled {
       color: rgb(219, 219, 219);

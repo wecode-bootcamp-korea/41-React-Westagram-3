@@ -3,6 +3,7 @@ import './Main.scss';
 import MainArticle from './components/MainArticle/MainArticle';
 import MainHeader from './components/MainHeader/MainHeader';
 import MainRight from './components/MainSideBar/MainRight';
+import '../../../styles/reset.scss';
 
 function BgmMain() {
   return (

@@ -13,24 +13,24 @@
   }
 
   .mPeopleList {
-    margin-top: 10px;
-    height: 30px;
     display: flex;
     align-items: center;
+    height: 30px;
+    margin-top: 10px;
     margin-bottom: 30px;
 
     img {
-      margin: 10px 10px 0 0;
       width: 40px;
+      margin: 10px 10px 0 0;
     }
 
     button {
       position: absolute;
       right: 10px;
       width: 50px;
-      background-color: white;
-      border: none;
       color: blue;
+      border: none;
+      background-color: white;
     }
   }
 }

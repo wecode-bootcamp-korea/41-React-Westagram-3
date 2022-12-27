@@ -1,11 +1,11 @@
 #story {
-  margin-top: 20px;
   width: 300px;
   height: 250px;
-  border: 1px solid rgb(219, 219, 219);
+  margin-top: 20px;
   padding: 10px;
-  overflow: scroll;
+  border: 1px solid rgb(219, 219, 219);
   border-radius: 5px;
+  overflow: scroll;
   background-color: white;
 
   &::-webkit-scrollbar {
@@ -30,16 +30,16 @@
   }
 
   .storyPeople {
-    height: 50px;
     display: flex;
     align-items: center;
-    background-color: white;
+    height: 50px;
     margin-bottom: 10px;
+    background-color: white;
   }
-  .storyPeople p:nth-child(2) {
+  .storyPeople li:nth-child(2) {
+    color: rgb(219, 219, 219);
     font-size: 12px;
     font-weight: 900;
     text-align: left;
-    color: rgb(219, 219, 219);
   }
 }
