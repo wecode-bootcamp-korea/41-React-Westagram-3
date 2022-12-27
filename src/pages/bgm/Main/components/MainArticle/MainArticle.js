@@ -7,8 +7,8 @@ import './MainArticle.scss';
 function MainArticle() {
   return (
     <div id="article">
-      <div id="article-feeds">
-        <div id="article-box">
+      <div id="articleFeeds">
+        <div id="articleBox">
           <MainArticleHeader />
           <MainArticleImgBox />
           <MainArticleBottom />

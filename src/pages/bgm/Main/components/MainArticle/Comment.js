@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Comment.scss';
 
-function Comment(props) {
+function Comment({ i }) {
   const [toggle, setToggle] = useState(false);
   const btnToggle = () => {
     if (toggle === false) {
@@ -11,13 +11,11 @@ function Comment(props) {
     }
   };
 
-  // const deleteBtn = () => {};
-
   return (
-    <ul className="content">
+    <ul className="content" value={i}>
       <img src="images/bgm/userimg.png" alt="asd" className="comentImg" />
       <li className="commentName">97_bhh</li>
-      <li className="commentText">{props.i}</li>
+      <li className="commentText">{i}</li>
       <div className="contentLikeTresh">
         <button
           className={
@@ -26,7 +24,7 @@ function Comment(props) {
           onClick={btnToggle}
         />
         <button>
-          <img src="images/bgm/delete.png" />
+          <img src="images/bgm/delete.png" alt="none" />
         </button>
       </div>
       {/* ㄴ부모 컴포넌트에서 받아온 i값을 출력한다. */}

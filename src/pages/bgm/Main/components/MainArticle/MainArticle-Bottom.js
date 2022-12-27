@@ -28,8 +28,8 @@ function MainArticleBottom() {
   // ㄴcontent 즉 input 값의 길이가 1보다 크거나 같게 설정해두면 default는 false로 적용이 됨\
 
   return (
-    <div className="article-comentbox">
-      <nav className="article-comentbox-likes">
+    <div className="articleComentBox">
+      <nav className="articleComentboxLikes">
         <ul>
           <li>
             <button>
@@ -53,12 +53,12 @@ function MainArticleBottom() {
           </li>
         </ul>
       </nav>
-      <div className="article-footer">
-        <div className="article-likespeople">
+      <div className="articleFooter">
+        <div className="articleLikesPeople">
           <img src="images/bgm/userimg.png" alt="#" />
           <strong>adfa님</strong> 외<strong>10명</strong>이 좋아합니다.
         </div>
-        <div className="article-contents">
+        <div className="articleContents">
           <strong>dfasdfas</strong> 위워크에서 진행한 베이킹 클래스,,,
         </div>
         <div className="commentBox">
@@ -68,9 +68,9 @@ function MainArticleBottom() {
           {/* // ㄴcontentArr에 content를 넣고 맵핑하여 i를 props 한다. // ㄴComment
           컴포넌트에 i를 i로 props해주고 key값을 key로 propps 해준다. */}
         </div>
-        <div className="article-feedtime">몇분전</div>
+        <div className="articleFeedTime">몇분전</div>
       </div>
-      <div className="article-add-coments">
+      <div className="articleAddComents">
         <input
           className="comentInput"
           placeholder="댓글 달기..."

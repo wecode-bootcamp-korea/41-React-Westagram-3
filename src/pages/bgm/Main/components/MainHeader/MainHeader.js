@@ -4,28 +4,27 @@ import SearchBar from './SearchBar';
 
 function MainHeader() {
   const [values, setValues] = useState('');
-  const [user, setUser] = useState([]);
 
   const change = (e) => {
     setValues(e.target.value);
   };
   return (
     <header className="MainHeader">
-      <ul className="lefthead">
+      <ul className="leftHead">
         <li>
           <img
-            className="lefthead-logoImg"
+            className="leftHeadLogoImg"
             src="images/bgm/instagram.png"
             alt="#"
           />
         </li>
         <li>
-          <img className="lefthead-markImg" src="images/bgm/mark.png" alt="#" />
+          <img className="leftHeadMarkImg" src="images/bgm/mark.png" alt="#" />
         </li>
       </ul>
-      <div id="headsearch">
+      <div id="headSearch">
         <input
-          className="headsearchBar"
+          className="headSearchBar"
           type="text"
           value={values}
           onChange={change}

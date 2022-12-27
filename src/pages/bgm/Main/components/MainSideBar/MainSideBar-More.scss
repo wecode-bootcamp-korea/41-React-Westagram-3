@@ -6,37 +6,31 @@
   border-radius: 5px;
   padding: 12px;
   background-color: white;
-}
 
-.morePhead {
-  display: flex;
-  justify-content: space-between;
-}
+  .morePhead {
+    display: flex;
+    justify-content: space-between;
+  }
 
-.mPeopleList {
-  margin-top: 10px;
-  height: 30px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-}
+  .mPeopleList {
+    margin-top: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 
-.mPeopleList img {
-  margin: 10px 10px 0 0;
-  width: 40px;
-}
+    img {
+      margin: 10px 10px 0 0;
+      width: 40px;
+    }
 
-.mPeopleList button {
-  position: absolute;
-  right: 10px;
-  width: 50px;
-  background-color: white;
-  border: none;
-  color: blue;
-}
-
-.comentsList div {
-  width: 10px;
-  height: 10px;
-  // background-image: url(../img/chat.png);
+    button {
+      position: absolute;
+      right: 10px;
+      width: 50px;
+      background-color: white;
+      border: none;
+      color: blue;
+    }
+  }
 }

@@ -3,12 +3,12 @@ import './MainSideBar-Info.scss';
 function MainSideBarInfo() {
   return (
     <div id="myInfo">
-      <img className="myInfo-img" src="images/bgm/userimg.png" alt="#" />
+      <img className="myInfoImg" src="images/bgm/userimg.png" alt="#" />
       <span>97bhh</span>
-      <div className="myInfo-navwrap">
-        <div className="myInfo-nonebox" />
-        <div className="profile-nav">
-          <ul className="profile-ul">
+      <div className="myInfoNavwrap">
+        <div className="myInfoNonebox" />
+        <div className="profileNav">
+          <ul className="profileUl">
             {/* <li>
                 <img className="profile-img" src="img/userimg.png" alt="#" />
                 프로필
@@ -26,6 +26,7 @@ function MainSideBarInfo() {
                 설정
               </li>
               <li>로그아웃</li> */}
+            {/* ㄴ 프로필 사진 클릭시 나타나는 창 */}
           </ul>
         </div>
       </div>

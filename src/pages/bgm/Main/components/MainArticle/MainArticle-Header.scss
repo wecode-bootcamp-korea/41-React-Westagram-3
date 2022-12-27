@@ -1,4 +1,4 @@
-.article-header {
+.articleHeader {
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   padding: 0 20px 0 20px;
 }
 
-.article-header-profile {
+.articleHeaderProfile {
   display: flex;
   position: relative;
   align-items: center;
@@ -16,8 +16,7 @@
     margin-right: 15px;
   }
 }
-
-.article-header-more {
+.articleHeaderMore {
   img {
     width: 30px;
   }

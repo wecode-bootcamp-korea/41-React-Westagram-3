@@ -1,4 +1,4 @@
-.article-comentbox-likes ul {
+.articleComentboxLikes ul {
   // 좋아요 , 댓글, 공유 , 저장버튼
   display: flex;
   // margin-top: 5px;
@@ -17,10 +17,10 @@
   }
 }
 
-.article-footer {
+.articleFooter {
   padding: 0 10px 0 10px;
 
-  .article-likespeople {
+  .articleLikesPeople {
     // 게시물을 좋아하는 사람들
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
       margin-right: 14px;
     }
   }
-  .article-contents {
+  .articleContents {
     // 게시글 댓글
     height: 20px;
     line-height: 20px;
@@ -43,14 +43,14 @@
     //   display: none;
     // }
   }
-  .article-feedtime {
+  .articleFeedTime {
     // 게시글 올린시간
     height: 20px;
     line-height: 20px;
   }
 }
 
-.article-add-coments {
+.articleAddComents {
   height: 40px;
   .comentInput {
     // 댓글 인풋
