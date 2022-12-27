@@ -10,11 +10,14 @@ const Feed = () => {
     //2
     setcomment(e.target.value);
   };
-  console.log(comment);
+  console.log(commentArray);
 
   const onSubmit = (e) => {
     //4
     e.preventDefault(); //5
+    // const copy = [...commentArray]
+    // copy.push(comment);
+    // setcommentArray(copy);
     setcommentArray([...commentArray, comment]); //6
     setcomment(''); //7
   };
@@ -72,9 +75,9 @@ const Feed = () => {
                 </div>
                 <div className="time">
                   <b>5분&nbsp;전</b>
-                  {commentArray.map(function (a, i) {
+                  {commentArray.map(function (value, i) {
                     //8
-                    return <p>장찬영 {commentArray[i]}</p>; //9
+                    return <p> {value}</p>; //9
                   })}
                 </div>
               </div>

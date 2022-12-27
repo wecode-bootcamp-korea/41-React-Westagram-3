@@ -8,13 +8,15 @@ function JcyLogin() {
 
   const [id, setId] = useState('');
   const [pw, setPw] = useState('');
-  const saveUserPw = (e) => {
-    setPw(e.target.value);
-    console.log('pw', pw);
-  };
+
   const saveUserId = (e) => {
     setId(e.target.value);
     console.log('id', id);
+  };
+
+  const saveUserPw = (e) => {
+    setPw(e.target.value);
+    console.log('pw', pw);
   };
 
   const active = id.includes('@') && pw.length >= 5;
@@ -25,8 +27,6 @@ function JcyLogin() {
   block
     ? (Color = { backgroundColor: '#b2dffc' })
     : (Color = { backgroundColor: '#2aa4f5' });
-
-  // };
 
   return (
     <>
