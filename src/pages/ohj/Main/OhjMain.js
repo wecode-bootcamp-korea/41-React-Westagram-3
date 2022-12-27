@@ -1,10 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Main.scss';
 import '../../../styles/reset.scss';
 import { useNavigate } from 'react-router-dom';
+import CommentList from './components/CommentList';
+import { RIGHT_FOOTER_LIST } from './components/RightFooter';
 
 function OhjMain() {
   const navigate = useNavigate();
+
+  const [userName] = useState('hacker');
+  const [comment, setComment] = useState('');
+  const [feedComments, setFeedComments] = useState([]);
+  const [isValid, setIsValid] = useState(false);
+
+  const saveComment = (e) => {
+    setComment(e.target.value);
+    console.log(comment);
+    activePublishBtn();
+  };
+  // 댓글 인풋창의 값이 계속 setComment -> comment 로 들어온다
+
+  const activePublishBtn = (e) => {
+    comment.length > 0 ? setIsValid(true) : setIsValid(false);
+  };
+  // 댓글 인풋창의 값 길이가 0이상이면 true or false
+
+  const post = (e) => {
+    const copyFeedComments = [...feedComments];
+    copyFeedComments.push(comment);
+    setFeedComments(copyFeedComments);
+    setComment('');
+  };
+
+  {
+    feedComments.map((commentArr, i) => {
+      return (
+        <CommentList userName={userName} userComment={commentArr} key={i} />
+      );
+    });
+  } // 죽여버려 ㅎㅎ
 
   return (
     <div id="wrap">
@@ -128,6 +162,7 @@ function OhjMain() {
                     </span>
                     <img src="images/ohj/like_heart.png" alt="댓글 좋아요" />
                   </li>
+                  <CommentList />
                 </ul>
               </div>
               <div className="comment_window">
@@ -135,8 +170,19 @@ function OhjMain() {
                   className="comment_write"
                   type="text"
                   placeholder="댓글 달기..."
+                  value={comment}
+                  onChange={saveComment}
+                  onKeyUp={activePublishBtn}
                 />
-                <button className="publish">게시</button>
+                <button
+                  type="button"
+                  className={
+                    comment.length > 0 ? 'activePublish' : 'noActivePublish'
+                  }
+                  disabled={isValid ? false : true}
+                >
+                  게시
+                </button>
               </div>
             </div>
           </article>
@@ -233,6 +279,11 @@ function OhjMain() {
                 <span>팔로우</span>
               </li>
             </ul>
+          </div>
+          <div id="right_footer">
+            {RIGHT_FOOTER_LIST.map((footerList) => {
+              return <span key={footerList.id}>{footerList.info}</span>;
+            })}
           </div>
         </div>
       </main>

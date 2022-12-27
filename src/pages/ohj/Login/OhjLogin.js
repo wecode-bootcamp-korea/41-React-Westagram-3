@@ -28,6 +28,11 @@ function OhjLogin(props) {
     }
   };
 
+  const enter = (e) => {
+    if (e.keyCode === 13) {
+      return goToMain();
+    }
+  };
   // idState 에는 setIdState 가 계속 들어오고 있다. (saveUserId 함수에서, e.target.value 를 계속 받는 중)
   // 계속 변경되는 setIdState (곧 idState) 에 @가 포함되어있거나 패스워드글자가 5개이상이면, setActive 가 true가 된다. (active의 값이 true가 된다. 기본값은 false)
   // setActive 의 값(true or false)은 active로 속속 전달되는데, 그것은 버튼의 disabled 속성에 갖다넣어주기로 한다. 밑으로 ㄱㄱ
@@ -67,6 +72,7 @@ function OhjLogin(props) {
             value={idState}
             placeholder="전화번호, 사용자 이름 또는 이메일"
             onChange={saveUserId}
+            onKeyUp={enter}
           />
           <input
             name="password"
@@ -75,6 +81,7 @@ function OhjLogin(props) {
             value={pwState}
             placeholder="비밀번호"
             onChange={saveUserPw}
+            onKeyUp={enter}
           />
           <button
             type="button"

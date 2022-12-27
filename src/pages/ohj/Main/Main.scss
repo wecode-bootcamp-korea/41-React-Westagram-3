@@ -416,7 +416,20 @@ main {
         outline: none;
       }
 
-      .publish {
+      .activePublish {
+        float: right;
+        width: 50px;
+        background-color: $whiteColor;
+        border: none;
+        margin-right: 15px;
+
+        font-family: '나눔고딕';
+        font-weight: 600;
+        color: royalblue;
+        cursor: pointer;
+      }
+
+      .noActivePublish {
         float: right;
         width: 50px;
         background-color: $whiteColor;
@@ -619,6 +632,17 @@ main {
         font-size: 13px;
         font-weight: 600;
         color: royalblue;
+      }
+    }
+
+    #right_footer {
+      width: 90%;
+      padding: 10px;
+      text-align: center;
+
+      span {
+        font-size: 13px;
+        opacity: 0.25;
       }
     }
   }
