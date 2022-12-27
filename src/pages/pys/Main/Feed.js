@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Comments from './Comments';
 
 const Feed = ({ user }) => {
-  const { name, email, id } = user;
+  const { username, name, email, id, address } = user;
   const [heart, setHeart] = useState(true);
   const [like, setLike] = useState('368');
 
   const handleHeartClick = (e, like) => {
     return setHeart(!heart);
-    setLike('like + 1');
+    // setLike('like + 1');
   };
   return (
     <div id="feeds">
@@ -20,8 +20,8 @@ const Feed = ({ user }) => {
               alt="profileImg"
             />
             <div className="id-location">
-              <div className="westagramId">{name}</div>
-              <div className="westagramLocate">wework2호점</div>
+              <div className="westagramId">{username}</div>
+              <div className="westagramLocate">{address.city}</div>
             </div>
           </div>
           <div id="threeDot">•••</div>
@@ -58,8 +58,10 @@ const Feed = ({ user }) => {
         <div id="articleBottom">
           <div id="like">{like}개</div>
           <div id="content">
-            <div className="westagramId">{name}</div>
-            <p>{email}</p>
+            <div className="westagramId">{username}</div>
+            <p>
+              {name} - {email}
+            </p>
           </div>
         </div>
         <Comments />

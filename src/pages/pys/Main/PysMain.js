@@ -43,7 +43,7 @@ const PysMain = () => {
             value={searchKeyword}
             onChange={searchUser}
             type="input"
-            placeholder="검색"
+            placeholder="아이디로 피드 찾기🔎"
           />
         </div>
         <div id="navRight">
