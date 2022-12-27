@@ -9,7 +9,7 @@ import JcyMain from './pages/jcy/Main/JcyMain';
 import PysLogin from './pages/pys/Login/PysLogin';
 import PysMain from './pages/pys/Main/PysMain';
 
-// import './styles/reset.scss';
+import './styles/reset.scss';
 
 function Router() {
   return (

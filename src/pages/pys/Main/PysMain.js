@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import MainSide from './MainSide';
 import FeedList from './FeedList';
+
 import './PysMain.scss';
 import './../../../components/Nav/Nav/Nav.scss';
 
@@ -30,7 +31,7 @@ const PysMain = () => {
 
   return (
     <div>
-      <nav>
+      <div id="nav">
         <div id="navLeft">
           <i className="fa-brands fa-instagram fa-xl" /> <div>|</div>
           <button id="logo" onClick={goToHome}>
@@ -59,7 +60,7 @@ const PysMain = () => {
             alt="profile"
           />
         </div>
-      </nav>
+      </div>
       <div>
         <main>
           <FeedList userList={filteredUser} />
