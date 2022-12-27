@@ -20,8 +20,8 @@ const Feed = ({ user }) => {
               alt="profileImg"
             />
             <div className="id-location">
-              <div className="westagramId">{username}</div>
-              <div className="westagramLocate">{address.city}</div>
+              <div className="InstagramId">{username}</div>
+              <div className="InstagramLocate">{address.city}</div>
             </div>
           </div>
           <div id="threeDot">•••</div>
@@ -58,7 +58,7 @@ const Feed = ({ user }) => {
         <div id="articleBottom">
           <div id="like">{like}개</div>
           <div id="content">
-            <div className="westagramId">{username}</div>
+            <div className="InstagramId">{username}</div>
             <p>
               {name} - {email}
             </p>

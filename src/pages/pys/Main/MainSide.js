@@ -16,8 +16,8 @@ const MainSide = () => {
           alt="profileIMG"
         />
         <div className="id-location">
-          <div className="westagramId">hellohaileyworld</div>
-          <div className="westagramLocate">Frontend 개발자</div>
+          <div className="InstagramId">hellohaileyworld</div>
+          <div className="InstagramLocate">Frontend 개발자</div>
         </div>
       </div>
 
@@ -34,8 +34,8 @@ const MainSide = () => {
               alt="userIMG"
             />
             <div className="id-location">
-              <div className="westagramId">dlwldms</div>
-              <div className="westagramLocate">가수</div>
+              <div className="InstagramId">dlwldms</div>
+              <div className="InstagramLocate">가수</div>
             </div>
           </div>
           {follow ? (

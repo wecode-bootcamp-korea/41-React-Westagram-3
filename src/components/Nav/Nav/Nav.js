@@ -14,7 +14,7 @@ const Nav = () => {
       <div id="navLeft">
         <i className="fa-brands fa-instagram fa-xl" /> <div>|</div>
         <button id="logo" onClick={goToHome}>
-          Westagram
+          Instagram
         </button>
       </div>
       <div id="navCenter">

@@ -37,7 +37,7 @@ const PysLogin = () => {
   return (
     <div>
       <div id="loginForm">
-        <div id="title">westagram</div>
+        <div id="title">Instagram</div>
         <div id="loginInput">
           <input
             id="loginId"
