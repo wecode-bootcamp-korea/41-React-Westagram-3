@@ -21,7 +21,7 @@ const PysMain = () => {
   };
 
   const filteredUser = userList.filter((user) =>
-    user.name.toLowerCase().includes(searchKeyword.toLowerCase())
+    user.username.toLowerCase().includes(searchKeyword.toLowerCase())
   );
 
   const navigate = useNavigate();
