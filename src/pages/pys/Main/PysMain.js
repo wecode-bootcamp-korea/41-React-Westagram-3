@@ -26,7 +26,7 @@ const PysMain = () => {
 
   const navigate = useNavigate();
   const goToHome = () => {
-    navigate('/');
+    navigate('/pyslogin');
   };
 
   return (
