@@ -1,0 +1,57 @@
+$whiteColor: #fff;
+
+@mixin displayFlex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+@font-face {
+  font-family: '나눔고딕';
+  src: url('../../../assets/fonts/NanumGothic-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: '나눔고딕';
+  src: url('../../../assets/fonts/NanumGothic-Bold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: '나눔고딕';
+  src: url('../../../assets/fonts/NanumGothic-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: '인스타그램 영문폰트 빌라봉';
+  src: url('../../../assets/fonts/billabong.otf');
+  font-weight: 600;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: rgb(244, 244, 244);
+}
+
+header {
+  width: 100%;
+  background-color: $whiteColor;
+  box-shadow: 0 1px 3px 1px rgb(234, 234, 234);
+}
+
+/* ========== main 시작 ========== */
+
+main {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}

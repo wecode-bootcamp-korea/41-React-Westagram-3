@@ -1,4 +1,6 @@
-export const RIGHT_FOOTER_LIST = [
+// 상수데이터
+
+export const FOOTER_LIST = [
   { id: 1, info: '소개 ∙' },
   { id: 2, info: '도움말 ∙' },
   { id: 3, info: '홍보 센터 ∙' },
