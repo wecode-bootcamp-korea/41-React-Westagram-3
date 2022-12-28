@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "class": "commentor_nickname comment3",
+    "user_name": "hello_123",
+    "user_comment": "재밌겠다 바보바보"
+  },
+  {
+    "id": 2,
+    "class": "commentor_nickname comment3",
+    "user_name": "whatsyour",
+    "user_comment": "와 이게되네"
+  },
+  {
+    "id": 3,
+    "class": "commentor_nickname comment3",
+    "user_name": "butiluv",
+    "user_comment": "근데 댓글아니야"
+  },
+  {
+    "id": 4,
+    "class": "commentor_nickname comment3",
+    "user_name": "__sad",
+    "user_comment": "피드를 구현해야댕"
+  },
+  {
+    "id": 5,
+    "class": "commentor_nickname comment3",
+    "user_name": "dollarbills_",
+    "user_comment": "샐러드사와"
+  }
+]

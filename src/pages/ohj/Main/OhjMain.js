@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Main.scss';
 import '../../../styles/reset.scss';
 import { useNavigate } from 'react-router-dom';
@@ -12,6 +12,22 @@ function OhjMain() {
   const [comment, setComment] = useState('');
   const [feedComments, setFeedComments] = useState([]);
   const [isValid, setIsValid] = useState(false);
+
+  const [feeds, setFeeds] = useState([]);
+
+  useEffect(() => {
+    fetch('data/ohjFeedsDatas.json')
+      .then((response) => response.json())
+      .then((result) => setFeeds(result));
+  }, []);
+
+  useEffect(() => {
+    fetch('data/ohjCommentData.json', {
+      method: 'GET',
+    })
+      .then((response) => response.json())
+      .then((result) => setFeedComments(result));
+  }, []);
 
   const saveComment = (e) => {
     setComment(e.target.value);
@@ -32,13 +48,11 @@ function OhjMain() {
     setComment('');
   };
 
-  {
-    feedComments.map((commentArr, i) => {
-      return (
-        <CommentList userName={userName} userComment={commentArr} key={i} />
-      );
-    });
-  } // 죽여버려 ㅎㅎ
+  // {
+  //   feedComments.map((el) => {
+  //     return <CommentList userName={userName} userComment={el} />;
+  //   });
+  // }
 
   return (
     <div id="wrap">
@@ -90,103 +104,137 @@ function OhjMain() {
         </nav>
       </header>
       <main>
-        <div className="feeds">
-          <article>
-            <div id="post_host">
-              <a className="post_host_pic" href="#">
-                <img src="images/ohj/post_host_pic.jpeg" alt="포스트주인" />
-              </a>
-              <a className="post_host_nickname" href="#">
-                <span>ohaangdoo</span>
-              </a>
-              <div className="dots">
-                <span className="dot_black" />
-                <span className="dot_black" />
-                <span className="dot_black" />
-              </div>
-            </div>
+        <article className="article">
+          {feeds.map((feed) => {
+            return (
+              <div className="feeds">
+                <article>
+                  <div id="post_host">
+                    <a className="post_host_pic" href="#">
+                      <img src={feed.user_img} alt="포스트주인" />
+                    </a>
+                    <a className="post_host_nickname" href="#">
+                      <span>{feed.user_name}</span>
+                    </a>
+                    <div className="dots">
+                      <span className="dot_black" />
+                      <span className="dot_black" />
+                      <span className="dot_black" />
+                    </div>
+                  </div>
 
-            <div id="post_pic">
-              <img src="images/ohj/post_pic.jpeg" alt="포스팅사진" />
-            </div>
+                  <div id="post_pic">
+                    <img src={feed.user_feed_pic} alt="포스팅사진" />
+                  </div>
 
-            <div id="post_txt">
-              <div className="post_txt_icons">
-                <div className="post_txt_icon_left">
-                  <span className="post_txt_icon1">
-                    <img
-                      src="images/ohj/post_like_heart.png"
-                      alt="포스트좋아요"
-                    />
-                  </span>
-                  <span className="post_txt_icon2">
-                    <img src="images/ohj/comment.png" alt="포스트좋아요" />
-                  </span>
-                  <span className="post_txt_icon3">
-                    <img src="images/ohj/upload.png" alt="포스트좋아요" />
-                  </span>
-                </div>
-                <div className="post_txt_icon_right">
-                  <span className="post_txt_icon4">
-                    <img src="images/ohj/bookmark.png" alt="포스트좋아요" />
-                  </span>
-                </div>
+                  <div id="post_txt">
+                    <div className="post_txt_icons">
+                      <div className="post_txt_icon_left">
+                        <span className="post_txt_icon1">
+                          <img
+                            src="images/ohj/post_like_heart.png"
+                            alt="포스트좋아요"
+                          />
+                        </span>
+                        <span className="post_txt_icon2">
+                          <img
+                            src="images/ohj/comment.png"
+                            alt="포스트좋아요"
+                          />
+                        </span>
+                        <span className="post_txt_icon3">
+                          <img src="images/ohj/upload.png" alt="포스트좋아요" />
+                        </span>
+                      </div>
+                      <div className="post_txt_icon_right">
+                        <span className="post_txt_icon4">
+                          <img
+                            src="images/ohj/bookmark.png"
+                            alt="포스트좋아요"
+                          />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="post_txt_comment">
+                      <a href="#">
+                        <img src={feed.liked_user_pic} alt="좋아요 누른 사람" />
+                      </a>
+                      <span className="like">
+                        <span className="strong">{feed.liked_user_name}</span>님
+                        외<span className="strong"> {feed.liked_num}</span>이
+                        좋아합니다
+                      </span>
+                      <ul className="comment">
+                        <li className="post_host_nickname">
+                          <span className="strong">{feed.user_name}</span>
+                          <span>&nbsp;{feed.post_content}</span>
+                        </li>
+                        <span className="more">더 보기</span>
+                        <li className="commentor_nickname comment1">
+                          <span>
+                            <span className="strong">honghong</span>
+                            <span>&nbsp;언제 돌아와 ??</span>
+                          </span>
+                          <img
+                            src="images/ohj/like_heart.png"
+                            alt="댓글 좋아요"
+                          />
+                        </li>
+                        <li className="commentor_nickname comment2">
+                          <span>
+                            <span className="strong">baeterang</span>
+                            <span>&nbsp;건강히! 조심히! 즐겁게 🙏🏻</span>
+                          </span>
+                          <img
+                            src="images/ohj/like_heart.png"
+                            alt="댓글 좋아요"
+                          />
+                        </li>
+                        {/* {feedComments.map((feedComment) => {
+                      return (
+                        <li className={feedComment.class} key={feedComment.id}>
+                          <span>
+                            <span className="strong">
+                              {feedComment.user_name}
+                            </span>
+                            <span>&nbsp;{feedComment.user_comment}</span>
+                          </span>
+                          <img
+                            src="images/ohj/like_heart.png"
+                            alt="댓글 좋아요"
+                          />
+                        </li>
+                      );
+                    })} */}
+                      </ul>
+                    </div>
+                    <div className="comment_window">
+                      <input
+                        className="comment_write"
+                        type="text"
+                        placeholder="댓글 달기..."
+                        value={comment}
+                        onChange={saveComment}
+                        onKeyUp={activePublishBtn}
+                      />
+                      <button
+                        type="button"
+                        className={
+                          comment.length > 0
+                            ? 'activePublish'
+                            : 'noActivePublish'
+                        }
+                        disabled={isValid ? false : true}
+                      >
+                        게시
+                      </button>
+                    </div>
+                  </div>
+                </article>
               </div>
-              <div className="post_txt_comment">
-                <a href="#">
-                  <img src="images/ohj/like_pic.jpeg" alt="좋아요 누른 사람" />
-                </a>
-                <span className="like">
-                  <span className="strong">seorina</span>님 외
-                  <span className="strong"> 62명</span>이 좋아합니다
-                </span>
-                <ul className="comment">
-                  <li className="post_host_nickname">
-                    <span className="strong">ohaangdoo</span>
-                    <span>
-                      &nbsp;4년만에 다시 온 파리! 에펠탑 앞에서 한 컷!
-                    </span>
-                  </li>
-                  <span className="more">더 보기</span>
-                  <li className="commentor_nickname comment1">
-                    <span>
-                      <span className="strong">honghong</span>
-                      <span>&nbsp;언제 돌아와 ??</span>
-                    </span>
-                    <img src="images/ohj/like_heart.png" alt="댓글 좋아요" />
-                  </li>
-                  <li className="commentor_nickname comment2">
-                    <span>
-                      <span className="strong">baeterang</span>
-                      <span>&nbsp;건강히! 조심히! 즐겁게 🙏🏻</span>
-                    </span>
-                    <img src="images/ohj/like_heart.png" alt="댓글 좋아요" />
-                  </li>
-                  <CommentList />
-                </ul>
-              </div>
-              <div className="comment_window">
-                <input
-                  className="comment_write"
-                  type="text"
-                  placeholder="댓글 달기..."
-                  value={comment}
-                  onChange={saveComment}
-                  onKeyUp={activePublishBtn}
-                />
-                <button
-                  type="button"
-                  className={
-                    comment.length > 0 ? 'activePublish' : 'noActivePublish'
-                  }
-                  disabled={isValid ? false : true}
-                >
-                  게시
-                </button>
-              </div>
-            </div>
-          </article>
-        </div>
+            );
+          })}
+        </article>
 
         <div className="main_right">
           <div id="right_my_account_pic">
