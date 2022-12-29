@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.scss';
 import '../../../styles/reset.scss';
 import { Link } from 'react-router-dom';
@@ -56,6 +56,23 @@ function OhjLogin(props) {
     activeLogin();
   }
 
+  const handleClick = () => {
+    fetch('http://10.58.52.154:3000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: idState,
+        password: pwState,
+      }),
+    })
+      .then((response) => response.json())
+      // .then((data) => localStorage.setItem('wtw-token', data.token));
+      .then((data) => console.log(data));
+    goToMain();
+  };
+
   return (
     <div>
       <section id="login_page">
@@ -86,7 +103,7 @@ function OhjLogin(props) {
           <button
             type="button"
             className="login_btn"
-            onClick={goToMain}
+            onClick={handleClick}
             disabled={active ? false : true} // active 값이 true 면 false 로, false 면 true 로 !
           >
             로그인

@@ -39,7 +39,7 @@ body {
 }
 
 header {
-  width: 100%;
+  width: 100vw; /* 디바이스 혹은 브라우저 크기에 비례해서 크기가 적용되는 단위 */
   background-color: $whiteColor;
   box-shadow: 0 1px 3px 1px rgb(234, 234, 234);
 }
@@ -50,7 +50,7 @@ main {
   display: flex;
   justify-content: space-between;
 
-  width: 80%;
+  width: 55%;
   height: auto;
   margin: 0 auto;
   margin-bottom: 50px;
