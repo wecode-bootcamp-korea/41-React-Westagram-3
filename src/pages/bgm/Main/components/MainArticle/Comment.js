@@ -24,7 +24,10 @@ function Comment({ i, index, onDelete }) {
           }
           onClick={btnToggle}
         />
-        <button onClick={() => onDelete(index)}>
+        <button
+          className="contentLikeTreshDelBtn"
+          onClick={() => onDelete(index)}
+        >
           <img src="images/bgm/delete.png" alt="none" />
         </button>
       </div>

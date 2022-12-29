@@ -3,6 +3,7 @@ import './MainRight.scss';
 import MainSideBarInfo from './MainSideBar-Info';
 import MainSideBarStory from './MainSideBar-Story';
 import MainSideBarMore from './MainSideBar-More';
+import MainSideBarFooter from './MainSideBarFooter';
 
 function MainRight() {
   return (
@@ -10,6 +11,7 @@ function MainRight() {
       <MainSideBarInfo />
       <MainSideBarStory />
       <MainSideBarMore />
+      <MainSideBarFooter />
     </div>
   );
 }

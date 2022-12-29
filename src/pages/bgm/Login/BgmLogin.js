@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.scss';
 // import { Link } from "react-router-dom";
@@ -14,6 +14,19 @@ function BgmLogin() {
   const realPw = 'qowoduf729';
 
   // 메인페이지 이동
+
+  useEffect(() => {
+    fetch('http://10.58.52.154:3000/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json;charset=utf-8' },
+      body: JSON.stringify({
+        email: 'dfjklasdk12aasd@naver.com',
+        password: 'Password1!',
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => localStorage.setItem(data));
+  }, []);
 
   return (
     <div className="loginPage">

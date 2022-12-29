@@ -51,21 +51,22 @@
 }
 
 .articleAddComents {
-  height: 40px;
+  height: 43px;
+  padding: 0;
+  border: 1px solid rgb(219, 219, 219);
   .comentInput {
     // 댓글 인풋
     width: 500px;
     height: 40px;
-    border: 1px solid rgb(219, 219, 219);
-    border-right: none;
+    border: none;
   }
   .comentBtn {
     // 댓글 버튼
+
     width: 100px;
     height: 40px;
     color: rgb(82, 71, 203);
-    border: 1px solid rgb(219, 219, 219);
-    border-left: none;
+    border: none;
     background-color: white;
     cursor: pointer;
     &:disabled {
