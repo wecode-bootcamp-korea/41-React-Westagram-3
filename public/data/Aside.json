@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "category": "소개"
+  },
+  {
+    "id": 2,
+    "category": "도움말"
+  },
+  {
+    "id": 3,
+    "category": "홍보 센터"
+  },
+  {
+    "id": 4,
+    "category": "API"
+  },
+  {
+    "id": 5,
+    "category": "채용 정보"
+  },
+  {
+    "id": 6,
+    "category": "개인정보처리방침"
+  },
+  {
+    "id": 7,
+    "category": "약관"
+  },
+  {
+    "id": 8,
+    "category": "위치"
+  },
+  {
+    "id": 9,
+    "category": "인기 계정"
+  },
+  {
+    "id": 10,
+    "category": "해시태그"
+  },
+  {
+    "id": 11,
+    "category": "언어"
+  }
+]

@@ -1,8 +1,11 @@
 import { BrowserRouter, Routes } from 'react-router-dom';
 import React from 'react';
 import { useState } from 'react';
+import { useEffect } from 'react';
+import Login from '../../Login/JcyLogin';
+import Comment from './Comment';
 
-const Feed = () => {
+const Feed = ({ feed }) => {
   const [comment, setcomment] = useState(''); //1 ,3
   const [commentArray, setcommentArray] = useState([]);
 
@@ -10,7 +13,6 @@ const Feed = () => {
     //2
     setcomment(e.target.value);
   };
-  console.log(commentArray);
 
   const onSubmit = (e) => {
     //4
@@ -21,6 +23,13 @@ const Feed = () => {
     setcommentArray([...commentArray, comment]); //6
     setcomment(''); //7
   };
+  let Color;
+  let block;
+  comment !== ''
+    ? (Color = { backgroundColor: '#2aa4f5' })
+    : (Color = { backgroundColor: '#b2dffc' });
+
+  comment !== '' ? (block = false) : (block = true);
 
   return (
     <>
@@ -29,23 +38,23 @@ const Feed = () => {
           <article className="article">
             <div className="user_info">
               <div className="top_left">
-                <img className="user_img" src="/images/Jcy/profile_1.jpg" />
+                <img className="user_img" src={feed.user_img} />
                 <span className="user_name">
-                  JangChan__0 <br />
-                  <span className="user_place">snow town</span>
+                  {feed.user_name} <br />
+                  <span className="user_place">{feed.user_place}</span>
                 </span>
               </div>
 
               <img className="more_Info" src="/images/Jcy/more.png" />
             </div>
             <div className="content">
-              <img className="content_IMG" src="/images/Jcy/content_IMG.jpg" />
+              <img className="content_IMG" src={feed.content_IMG} />
             </div>
             <div className="rection">
               <div className="top">
                 <div className="left">
                   <div className="rection_Btn">
-                    <img src="/images/Jcy/heart (1).png" />
+                    <img src="/images/Jcy/redheart.png" />
                     <img src="/images/Jcy/speech-bubble.png" />
                     <img src="/images/Jcy/share.png" />
                   </div>
@@ -63,25 +72,25 @@ const Feed = () => {
                 </div>
                 <div className="m_b">
                   <div className="ps_id">
-                    <b>JangChan__0</b>
+                    <b>{feed.ps_id}</b>
                   </div>
-                  <div className="ps_ct">펑펑&nbsp;눈</div>
+                  <div className="ps_ct">{feed.ps_ct}</div>
                 </div>
                 <div className="friendComment">
                   <div className="friend_id">
-                    <b>Chanwoo</b>
+                    <b>{feed.friend_id}</b>
                   </div>
-                  <div className="friend_ct">와 예쁘다~~~~</div>
+                  <div className="friend_ct">{feed.friend_ct}</div>
                 </div>
                 <div className="time">
                   <b>5분&nbsp;전</b>
-                  {commentArray.map(function (value, i) {
-                    //8
-                    return <p> {value}</p>; //9
-                  })}
                 </div>
+
+                {commentArray.map((value, i) => (
+                  <Comment key={i} comments={value} />
+                ))}
               </div>
-              <div className="newComment"></div>
+
               <form className="form">
                 <input
                   className="comment_maker"
@@ -90,7 +99,12 @@ const Feed = () => {
                   value={comment}
                   onChange={onChange} //2
                 />
-                <button className="commentBtn" onClick={onSubmit}>
+                <button
+                  className="commentBtn"
+                  onClick={onSubmit}
+                  style={Color}
+                  disabled={block}
+                >
                   게시
                 </button>
               </form>

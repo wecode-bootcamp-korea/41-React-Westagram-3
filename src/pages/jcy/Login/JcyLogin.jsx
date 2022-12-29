@@ -58,7 +58,7 @@ function JcyLogin() {
           }}
         >
           로그인
-        </button>{' '}
+        </button>
         <br />
         <div className="forget">비밀번호를 잊으셨나요?</div>
         <br />

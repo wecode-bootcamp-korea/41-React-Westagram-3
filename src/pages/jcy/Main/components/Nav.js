@@ -15,7 +15,7 @@ const Nav = () => {
         </div>
         <div className="buttonBar">
           <img className="explore" src="/images/Jcy/explore.png" />
-          <img className="heart" src="/images/Jcy/heart.png" />
+          <img className="heart" src="/images/Jcy/emtyheart.png" />
           <img className="user_profile" src="/images/Jcy/profile.png" />
         </div>
       </nav>

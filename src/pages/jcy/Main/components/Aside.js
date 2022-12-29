@@ -1,7 +1,17 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const Aside = () => {
+  const [aside, setAside] = useState([]);
+
+  useEffect(() => {
+    fetch('data/Aside.json')
+      .then((result) => result.json())
+      .then((data) => setAside(data));
+  }, []);
+  console.log(aside);
+
   return (
     <aside className="main_right">
       <div className="AD">
@@ -25,11 +35,22 @@ const Aside = () => {
       </div>
       <div className="advice"></div>
       <div className="insta_Info">
-        Westagram &nbsp;정보,&nbsp; 지원,&nbsp;
-        홍보&nbsp;센터,&nbsp;API&nbsp;채용&nbsp;정보,&nbsp;개인정보처리방침,&nbsp;약관,&nbsp;디렉터리,&nbsp;프로필,&nbsp;해시태그,&nbsp;언어
+        <ul className="Foot">
+          {aside.map((item, key) => {
+            return <Foot key={key} id={item.id} category={item.category} />;
+          })}
+        </ul>
       </div>
     </aside>
   );
 };
 
 export default Aside;
+
+const Foot = ({ id, category }) => {
+  return (
+    <li className="foot_li">
+      <span>{category}.</span>
+    </li>
+  );
+};

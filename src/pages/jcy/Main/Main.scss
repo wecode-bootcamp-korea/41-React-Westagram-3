@@ -14,6 +14,7 @@
   z-index: 5;
   display: flex;
   position: fixed;
+
   border-bottom: 1px solid lightgray;
   background-color: white;
   top: 0;
@@ -95,20 +96,22 @@
 
 .main {
   display: flex;
-  background-color: rgb(250, 250, 250);
+  background-color: white;
   width: 1900px;
-  height: 2000px;
+  // height: 1200px;
+  margin: 70px 0 20px 0;
   .feeds {
-    width: 930px;
-    height: 1200px;
+    width: 900px;
+    padding: 100px, 0;
+    margin: 50px 0;
 
     justify-content: column;
     article.article {
       width: 100%;
-      height: 100%;
+      // height: 100%;
 
-      margin-top: 15%;
-      border: 1px solid lightgray;
+      // margin-top: 15%;
+      // border: 1px solid rgb(218, 17, 17);
       justify-content: flex-start;
       .user_info {
         width: 100%;
@@ -117,7 +120,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-bottom: lightgray;
+
+        border: 1px solid lightgray;
         .top_left {
           display: flex;
           align-items: center;
@@ -151,20 +155,24 @@
         width: 100%;
         height: 60%;
         background-color: rgb(255, 255, 255);
-        border-top: 1px solid lightgray;
-        border-bottom: 1px solid lightgray;
+        border: 1px solid lightgray;
         display: flex;
         justify-content: center;
+        overflow: hidden;
         .content_IMG {
           width: auto;
-          height: 100%;
+          height: 700px;
         }
       }
       .rection {
         background-color: white;
+
         .top {
           display: flex;
           justify-content: space-between;
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+
           .rection_Btn {
             margin: 20px 25px;
           }
@@ -174,8 +182,10 @@
           }
         }
         .middle {
-          margin-left: 45px;
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
           .rection_middle {
+            margin-left: 45px;
             width: 100%;
             height: 30%;
             display: flex;
@@ -190,17 +200,21 @@
             border: 2px solid greenyellow;
           }
           .m_b {
-            margin: 20px 0px 8px;
+            margin: 20px 0px 28px;
             display: flex;
             .ps_id {
+              font-weight: bolder;
+              margin-left: 45px;
               font-size: 20px;
             }
             .ps_ct {
+              font-weight: bolder;
               margin-left: 10px;
               font-size: 20px;
             }
           }
           .friendComment {
+            margin-left: 45px;
             display: flex;
             margin-top: 10px;
             font-size: 20px;
@@ -209,31 +223,37 @@
             }
           }
           .time {
-            margin: 10px 0 40px;
+            padding: 5px 0 15px 45px;
+          }
+          .NewCommentLine {
+            padding-left: 45px;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            padding-top: 1px;
+            border-left: 1px solid lightgray;
+            border-right: 1px solid lightgray;
           }
         }
-        .Newcomment {
-          font-size: 20px;
-          margin-bottom: 10px;
-        }
+
         .comment_maker {
           width: 100%;
           height: 50px;
           font-size: 20px;
           padding-left: 45px;
           border: 1px solid lightgray;
-          margin-top: 27px;
         }
         .commentBtn {
           position: relative;
           width: 100px;
           height: 45px;
-          left: 89%;
-          top: -49.5px;
-          border-radius: 30px;
+          left: 89.5%;
+          top: -47px;
+          border-radius: 15px;
           background-color: white;
           border: 1px solid #b2dffc;
-          color: #b2dffc;
+          color: #ffffff;
           font-size: 20px;
           letter-spacing: 13px;
           text-align: center;
@@ -272,18 +292,18 @@
 .story_user_name {
   width: 80%;
   height: 100%;
-
   display: flex;
   align-items: center;
 }
 
 .main_right {
   z-index: 4;
-  width: 27%;
-  height: 80%;
-  margin-top: -50%;
-  margin-left: 51%;
+  width: 400px;
+  height: 700px;
+  margin-top: -3000px;
+  margin-left: 1000px;
   position: fixed;
+
   .AD {
     width: 100%;
     height: 13.5%;
@@ -302,44 +322,50 @@
       }
     }
   }
-  .story {
+}
+.story {
+  width: 100%;
+  height: 40%;
+  background-color: white;
+  border: 1px solid lightgray;
+  .story_top {
     width: 100%;
-    height: 40%;
-    background-color: white;
-    border: 1px solid lightgray;
-    .story_top {
-      width: 100%;
-      height: 20%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .story_name {
-        color: gray;
-        margin: 0 20px;
-        font-size: 20px;
-      }
-      .story_more {
-        margin: 0 20px;
-        font-size: 20px;
-      }
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .story_name {
+      color: gray;
+      margin: 0 20px;
+      font-size: 20px;
     }
-    .story_user {
-      width: 20%;
-      height: 100%;
-      display: flex;
+    .story_more {
+      margin: 0 20px;
+      font-size: 20px;
     }
   }
-  .advice {
-    width: 100%;
-    height: 30%;
-    background-color: white;
-    margin-top: 20px;
-    border: 1px solid lightgray;
+  .story_user {
+    width: 20%;
+    height: 100%;
+    display: flex;
   }
-  .insta_Info {
-    margin-top: 20px;
-    width: 70%;
-    font-size: 16px;
-    color: gray;
-  }
+}
+.advice {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid lightgray;
+}
+.insta_Info {
+  margin-top: 20px;
+  width: 70%;
+  font-size: 16px;
+  color: gray;
+}
+
+.foot_li {
+  display: inline;
+  margin: 0 5px;
+  color: lightgray;
 }
