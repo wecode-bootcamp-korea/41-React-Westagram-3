@@ -1,0 +1,36 @@
+#morePeople {
+  position: relative;
+  margin-top: 20px;
+  height: 220px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  padding: 12px;
+  background-color: white;
+
+  .morePhead {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mPeopleList {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+
+    img {
+      width: 40px;
+      margin: 10px 10px 0 0;
+    }
+
+    button {
+      position: absolute;
+      right: 10px;
+      width: 50px;
+      color: blue;
+      border: none;
+      background-color: white;
+    }
+  }
+}

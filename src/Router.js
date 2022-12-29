@@ -1,22 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Nav from '../src/components/Nav/Nav';
-import BgmLogin from './pages/bgm/Login/BgmLogin';
+// import Nav from '../src/components/Nav/Nav';
 import BgmMain from './pages/bgm/Main/BgmMain';
+import BgmLogin from './pages/bgm/Login/BgmLogin';
 import OhjLogin from './pages/ohj/Login/OhjLogin';
 import OhjMain from './pages/ohj/Main/OhjMain';
 import JcyLogin from './pages/jcy/Login/JcyLogin';
 import JcyMain from './pages/jcy/Main/JcyMain';
 import PysLogin from './pages/pys/Login/PysLogin';
 import PysMain from './pages/pys/Main/PysMain';
+import BgmSignup from './pages/bgm/Signup/BgmSignup';
 
 function Router() {
   return (
     <BrowserRouter>
-      <Nav />
       <Routes>
         <Route path="/" element={<BgmLogin />} />
         <Route path="/BgmMain" element={<BgmMain />} />
+        <Route path="/BgmSignup" element={<BgmSignup />} />
         <Route path="/OhjLogin" element={<OhjLogin />} />
         <Route path="/OhjMain" element={<OhjMain />} />
         <Route path="/JcyLogin" element={<JcyLogin />} />

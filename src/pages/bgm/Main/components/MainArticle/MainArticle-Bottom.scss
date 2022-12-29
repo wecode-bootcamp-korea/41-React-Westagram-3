@@ -1,0 +1,76 @@
+.articleComentboxLikes ul {
+  // 좋아요 , 댓글, 공유 , 저장버튼
+  display: flex;
+  height: 30px;
+  padding: 0 10px 0 10px;
+  li button {
+    width: 40px;
+    border: none;
+    background-color: white;
+  }
+  li:nth-child(4) {
+    margin-left: 420px;
+  }
+  li button img {
+    width: 30px;
+  }
+}
+
+.articleFooter {
+  padding: 0 10px 0 10px;
+
+  .articleLikesPeople {
+    // 게시물을 좋아하는 사람들
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font-family: 'KyoboHandwriting2021sjy';
+
+    img {
+      width: 30px;
+      margin-right: 14px;
+    }
+  }
+  .articleContents {
+    // 게시글 댓글
+    height: 20px;
+    line-height: 20px;
+  }
+  .commentBox {
+    // height: 60px;
+    // overflow: scroll;
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+  }
+  .articleFeedTime {
+    // 게시글 올린시간
+    height: 20px;
+    line-height: 20px;
+  }
+}
+
+.articleAddComents {
+  height: 43px;
+  padding: 0;
+  border: 1px solid rgb(219, 219, 219);
+  .comentInput {
+    // 댓글 인풋
+    width: 500px;
+    height: 40px;
+    border: none;
+  }
+  .comentBtn {
+    // 댓글 버튼
+
+    width: 100px;
+    height: 40px;
+    color: rgb(82, 71, 203);
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    &:disabled {
+      color: rgb(219, 219, 219);
+    }
+  }
+}

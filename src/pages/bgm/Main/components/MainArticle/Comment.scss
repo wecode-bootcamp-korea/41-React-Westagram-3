@@ -1,0 +1,45 @@
+.content {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .comentImg {
+    width: 30px;
+    margin-right: 10px;
+  }
+  .commentName {
+    margin-right: 10px;
+    font-weight: 700;
+  }
+
+  .contentLikeTresh {
+    position: absolute;
+    display: flex;
+    right: 0px;
+    button {
+      // display: none;
+      cursor: pointer;
+      border: none;
+      background-color: white;
+    }
+    .contentLikeTreshHeartBtn {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      background: url(../../../../../heart.png);
+      background-size: cover;
+    }
+    .contentLikeTreshHeartBtn.red {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      background: url(../../../../../redheart.png);
+      background-size: cover;
+    }
+
+    img {
+      width: 16px;
+      margin-right: 4px;
+    }
+  }
+}
