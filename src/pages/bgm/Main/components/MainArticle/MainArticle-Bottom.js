@@ -18,6 +18,9 @@ function MainArticleBottom() {
     setContent('');
     // ㄴcomment함수 마지막엔 setContent('')로 업데이트해 content를 비운다.
   };
+  // const delBtn = (index) => {
+  //   setContentArr(contentArr.splice(index, 1));
+  // };
   const enter = (event) => {
     //   // ㄴevent가 발생 했을 때 해당 event의 key값이 "enter"일 경우 comment()를 실행하도록 만든 함수
     if (event.key === 'Enter' && content.length > 0) {
@@ -63,7 +66,7 @@ function MainArticleBottom() {
         </div>
         <div className="commentBox">
           {contentArr.map((i, key) => (
-            <Comment i={i} key={key} contentArr={contentArr} />
+            <Comment i={i} key={key} index={key} />
           ))}
           {/* // ㄴcontentArr에 content를 넣고 맵핑하여 i를 props 한다. // ㄴComment
           컴포넌트에 i를 i로 props해주고 key값을 key로 propps 해준다. */}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Comment.scss';
 
-function Comment({ i }) {
+function Comment({ i, index, onDelete }) {
   const [toggle, setToggle] = useState(false);
+
   const btnToggle = () => {
     if (toggle === false) {
       setToggle(true);
@@ -23,7 +24,7 @@ function Comment({ i }) {
           }
           onClick={btnToggle}
         />
-        <button>
+        <button onClick={() => onDelete(index)}>
           <img src="images/bgm/delete.png" alt="none" />
         </button>
       </div>

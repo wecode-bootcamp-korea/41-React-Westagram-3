@@ -9,6 +9,7 @@ import JcyLogin from './pages/jcy/Login/JcyLogin';
 import JcyMain from './pages/jcy/Main/JcyMain';
 import PysLogin from './pages/pys/Login/PysLogin';
 import PysMain from './pages/pys/Main/PysMain';
+import BgmSignup from './pages/bgm/Signup/BgmSignup';
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Routes>
         <Route path="/" element={<BgmLogin />} />
         <Route path="/BgmMain" element={<BgmMain />} />
+        <Route path="/BgmSignup" element={<BgmSignup />} />
         <Route path="/OhjLogin" element={<OhjLogin />} />
         <Route path="/OhjMain" element={<OhjMain />} />
         <Route path="/JcyLogin" element={<JcyLogin />} />
