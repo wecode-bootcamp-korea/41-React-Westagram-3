@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "user_name": "JangchanHwi",
+    "user_img": "/images/Jcy/profile_5.jpg",
+    "user_place": "WECODE",
+    "content_IMG": "/images/Jcy/profile_5.jpg",
+    "ps_id": "JangchanHwi",
+    "ps_ct": "최고야",
+    "friend_id": "wecode",
+    "friend_ct": "예쁘다!"
+  },
+  {
+    "id": 2,
+    "user_name": "JangchanJin",
+    "user_img": "/images/Jcy/profile_6.jpg",
+    "user_place": "경기도",
+    "content_IMG": "/images/Jcy/profile_6.jpg",
+    "ps_id": "JangchanJin",
+    "ps_ct": "안녕~",
+    "friend_id": "Hxxx",
+    "friend_ct": "헐 뭐야~"
+  },
+  {
+    "id": 3,
+    "user_name": "JangchanWoo",
+    "user_img": "/images/Jcy/profile_4.jpg",
+    "user_place": "WECODE",
+    "content_IMG": "/images/Jcy/profile_4.jpg",
+    "ps_id": "JangchanWoo",
+    "ps_ct": "할 수 있어~",
+    "friend_id": "Jangchanyoung",
+    "friend_ct": "해보자!"
+  },
+  {}
+]

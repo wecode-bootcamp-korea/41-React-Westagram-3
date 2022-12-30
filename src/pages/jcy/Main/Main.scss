@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+}
+// @font-face {
+//   font-family: "insta-Regular";
+//   src: url(../Feed/Font/Montserrat-Regular.ttf);
+// }
+// @font-face {
+//   font-family: "insta-Bold";
+//   src: url(../Feed/Font/Montserrat-Bold.ttf);
+// }
+
+.navigation {
+  z-index: 5;
+  display: flex;
+  position: fixed;
+
+  border-bottom: 1px solid lightgray;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 80px;
+  justify-content: space-around;
+  .frontBar {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1% 5%;
+    align-items: center;
+    .insta {
+      width: 40px;
+      height: 40px;
+    }
+    .border_1 {
+      height: 40px;
+      border-right: 3px solid black;
+      border-radius: 5px;
+      display: inline;
+    }
+    span.LogoHead {
+      font-family: Lobster;
+      font-size: 33px;
+      margin-top: auto;
+    }
+  }
+  .centerBar {
+    width: 30%;
+    padding: 0 auto;
+    justify-content: center;
+    margin: 0 5%;
+    .search {
+      margin-top: 5%;
+      width: 350px;
+      height: 30px;
+      display: flex;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      font-size: 18px;
+      /* background-image: url(../../../public/images/pngwing.png) no-repeat; */
+      background-size: 13px;
+    }
+  }
+  .buttonBar {
+    width: 30%;
+    margin: 1% 5%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .explore {
+      width: 35px;
+      height: 35px;
+    }
+    .heart {
+      width: 35px;
+      height: 35px;
+      margin-left: 25px;
+    }
+    .user_profile {
+      width: 35px;
+      height: 35px;
+      margin-left: 25px;
+    }
+  }
+}
+
+.mainContainer {
+  width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  background-color: white;
+  width: 1900px;
+  // height: 1200px;
+  margin: 70px 0 20px 0;
+  .feeds {
+    width: 900px;
+    padding: 100px, 0;
+    margin: 50px 0;
+
+    justify-content: column;
+    article.article {
+      width: 100%;
+      // height: 100%;
+
+      // margin-top: 15%;
+      // border: 1px solid rgb(218, 17, 17);
+      justify-content: flex-start;
+      .user_info {
+        width: 100%;
+        height: 100px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        border: 1px solid lightgray;
+        .top_left {
+          display: flex;
+          align-items: center;
+          width: 40%;
+          .user_img {
+            width: 70px;
+            height: 70px;
+            border-radius: 70%;
+            margin-left: 4%;
+          }
+          .user_name {
+            margin-left: 7.5%;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.4px;
+            font-family: 'insta';
+            .user_place {
+              color: gray;
+              font-size: 17px;
+            }
+          }
+        }
+        .more_Info {
+          width: 35px;
+          height: 35px;
+          margin-left: 20%;
+          margin-right: 35px;
+        }
+      }
+      .content {
+        width: 100%;
+        height: 60%;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid lightgray;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        .content_IMG {
+          width: auto;
+          height: 700px;
+        }
+      }
+      .rection {
+        background-color: white;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+
+          .rection_Btn {
+            margin: 20px 25px;
+          }
+          .right img {
+            width: 40px;
+            margin: 20px 25px;
+          }
+        }
+        .middle {
+          border-left: 1px solid lightgray;
+          border-right: 1px solid lightgray;
+          .rection_middle {
+            margin-left: 45px;
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+          }
+          .rection_middle img {
+            width: 35px;
+            height: 35px;
+            border-radius: 70%;
+            margin-right: 10px;
+            border: 2px solid greenyellow;
+          }
+          .m_b {
+            margin: 20px 0px 28px;
+            display: flex;
+            .ps_id {
+              font-weight: bolder;
+              margin-left: 45px;
+              font-size: 20px;
+            }
+            .ps_ct {
+              font-weight: bolder;
+              margin-left: 10px;
+              font-size: 20px;
+            }
+          }
+          .friendComment {
+            margin-left: 45px;
+            display: flex;
+            margin-top: 10px;
+            font-size: 20px;
+            .friend_ct {
+              margin-left: 10px;
+            }
+          }
+          .time {
+            padding: 5px 0 15px 45px;
+          }
+          .NewCommentLine {
+            padding-left: 45px;
+            margin-left: -1px;
+            margin-right: -1px;
+            margin-bottom: 5px;
+            font-size: 20px;
+            padding-top: 1px;
+            border-left: 1px solid lightgray;
+            border-right: 1px solid lightgray;
+          }
+        }
+
+        .comment_maker {
+          width: 100%;
+          height: 50px;
+          font-size: 20px;
+          padding-left: 45px;
+          border: 1px solid lightgray;
+          text-decoration-style: none;
+          outline: none;
+        }
+        .commentBtn {
+          position: relative;
+          width: 100px;
+          height: 48px;
+          left: 88.8%;
+          top: -49px;
+          // border-radius: 5px;
+          background-color: white;
+          border: none;
+          font-weight: bold;
+          color: #b2dffc;
+          font-size: 20px;
+          letter-spacing: 13px;
+          text-align: center;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  .rection_Btn img {
+    width: 40px;
+    margin-left: 18px;
+  }
+}
+
+.User_id {
+  display: inline;
+  margin-right: 10px;
+}
+
+.story_user_profile1 {
+  display: flex;
+}
+.story_user_profile1 img {
+  width: 70px;
+  height: 70px;
+  border-radius: 70%;
+  margin: 10% 25%;
+  border: 2px solid rgb(201, 37, 173);
+}
+.story_user_profile1 span {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.story_user_name {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main_right {
+  z-index: 4;
+  width: 400px;
+  height: 700px;
+  top: 100px;
+  right: 30px;
+  // margin-top: -00px;
+  // margin-left: 1000px;
+  position: fixed;
+
+  .AD {
+    width: 100%;
+    height: 13.5%;
+
+    display: flex;
+    .AD_IMG {
+      width: 80px;
+      height: 80px;
+      border-radius: 70%;
+      margin: 2% 0;
+    }
+    .AD_Info {
+      margin: 6% 4%;
+      .AD_Info_in {
+        color: gray;
+      }
+    }
+  }
+}
+.story {
+  width: 100%;
+  height: 40%;
+  background-color: white;
+  border: 1px solid lightgray;
+  .story_top {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .story_name {
+      color: gray;
+      margin: 0 20px;
+      font-size: 20px;
+    }
+    .story_more {
+      margin: 0 20px;
+      font-size: 20px;
+    }
+  }
+  .story_user {
+    width: 20%;
+    height: 100%;
+    display: flex;
+  }
+}
+.advice {
+  width: 100%;
+  height: 30%;
+  background-color: white;
+  margin-top: 20px;
+  border: 1px solid lightgray;
+}
+.insta_Info {
+  margin-top: 20px;
+  width: 70%;
+  font-size: 16px;
+  color: gray;
+}
+
+.foot_li {
+  display: inline;
+  margin: 0 5px;
+  color: lightgray;
+}
