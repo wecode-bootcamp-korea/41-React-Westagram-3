@@ -26,8 +26,8 @@ const Feed = ({ feed }) => {
   let Color;
   let block;
   comment !== ''
-    ? (Color = { backgroundColor: '#2aa4f5' })
-    : (Color = { backgroundColor: '#b2dffc' });
+    ? (Color = { backgroundColor: '#67bdf5', color: '#ffffff' })
+    : (Color = { backgroundColor: '#ffffff' });
 
   comment !== '' ? (block = false) : (block = true);
 

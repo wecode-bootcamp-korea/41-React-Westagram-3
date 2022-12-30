@@ -243,17 +243,20 @@
           font-size: 20px;
           padding-left: 45px;
           border: 1px solid lightgray;
+          text-decoration-style: none;
+          outline: none;
         }
         .commentBtn {
           position: relative;
           width: 100px;
-          height: 45px;
-          left: 89.5%;
-          top: -47px;
-          border-radius: 15px;
+          height: 48px;
+          left: 88.8%;
+          top: -49px;
+          // border-radius: 5px;
           background-color: white;
-          border: 1px solid #b2dffc;
-          color: #ffffff;
+          border: none;
+          font-weight: bold;
+          color: #b2dffc;
           font-size: 20px;
           letter-spacing: 13px;
           text-align: center;
@@ -300,8 +303,10 @@
   z-index: 4;
   width: 400px;
   height: 700px;
-  margin-top: -3000px;
-  margin-left: 1000px;
+  top: 100px;
+  right: 30px;
+  // margin-top: -00px;
+  // margin-left: 1000px;
   position: fixed;
 
   .AD {
