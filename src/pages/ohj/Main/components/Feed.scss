@@ -12,6 +12,7 @@ $whiteColor: #fff;
   background-color: $whiteColor;
   border: 1px solid #ddd;
   border-radius: 3px;
+  overflow: hidden;
 
   /* post_host 영역 */
 
@@ -68,14 +69,14 @@ $whiteColor: #fff;
   /* post_pic 영역 */
 
   #post_pic {
-    width: inherit;
-    height: 400px;
+    width: 500px;
+    height: 495px;
     overflow: hidden;
     background-color: blue;
 
     img {
       width: 100%;
-      translate: 0 -87px;
+      // translate: 0 -px;
     }
   }
 
