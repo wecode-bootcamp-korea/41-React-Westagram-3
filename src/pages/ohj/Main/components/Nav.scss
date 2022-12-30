@@ -1,0 +1,129 @@
+$whiteColor: #fff;
+
+@mixin displayFlex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+nav {
+  @include displayFlex(space-between);
+
+  width: 75%;
+  height: 60px;
+  margin: 0 auto;
+  padding: 0 100px;
+
+  /* logo 영역 */
+
+  #logo {
+    @include displayFlex(space-around);
+
+    span {
+      display: inline-block;
+
+      width: 2px;
+      height: 25px;
+      border-right: 2px solid #222;
+      margin-top: 18px;
+    }
+
+    .icon_logo {
+      display: inline-block;
+      width: 20px;
+      margin: 20px;
+    }
+
+    .icon_logo img {
+      width: 100%;
+    }
+
+    .letter_logo {
+      display: inline-block;
+      width: 95px;
+      margin: 20px 0 20px 20px;
+    }
+
+    .letter_logo img {
+      width: 100%;
+    }
+  }
+
+  /* nav_search 영역 */
+
+  #nav_search {
+    position: relative;
+
+    input {
+      width: 200px;
+      padding: 3px;
+      margin-top: 18px;
+      border: 1px solid #aaa;
+      border-radius: 3px;
+    }
+
+    input::placeholder {
+      text-align: center;
+    }
+
+    img {
+      position: absolute;
+      left: 72px;
+      top: 22px;
+      opacity: 0.5;
+
+      width: 15px;
+    }
+  }
+
+  /* nav_icons 영역 */
+
+  #nav_icons {
+    span {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      margin: 17px 9px;
+    }
+
+    .red_dot {
+      width: 4px;
+      height: 4px;
+      background-color: #e20055;
+      border-radius: 50%;
+
+      position: absolute;
+      left: 2px;
+      top: 14px;
+    }
+
+    span.icon1 img {
+      width: 100%;
+    }
+
+    span.icon2 {
+      position: relative;
+    }
+
+    span.icon2 img {
+      width: 100%;
+    }
+
+    span.icon3 img {
+      width: 100%;
+    }
+
+    .btn_toLogin {
+      position: absolute;
+      top: 15px;
+      right: 10%;
+      padding: 5px 7px;
+
+      border: 2px solid #222;
+      border-radius: 7px;
+      background: #222;
+      color: $whiteColor;
+
+      cursor: pointer;
+    }
+  }
+}

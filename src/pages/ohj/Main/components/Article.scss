@@ -1,0 +1,10 @@
+$whiteColor: #fff;
+
+@mixin displayFlex($justify) {
+  display: flex;
+  justify-content: $justify;
+}
+
+.article {
+  width: 64%;
+}

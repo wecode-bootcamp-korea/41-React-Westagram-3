@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "user_img": "images/ohj/post_host_pic.jpeg",
+    "user_name": "ohaangdoo",
+    "user_feed_pic": "images/ohj/post_pic.jpeg",
+    "liked_user_pic": "images/ohj/like_pic.jpeg",
+    "liked_user_name": "seorina",
+    "liked_num": "62명",
+    "post_content": "4년만에 다시 온 파리! 에펠탑 앞에서 한 컷!"
+  },
+  {
+    "id": 2,
+    "user_img": "images/ohj/post_host_pic2.jpeg",
+    "user_name": "seorina",
+    "user_feed_pic": "images/ohj/post_pic2.jpeg",
+    "liked_user_pic": "images/ohj/like_pic.jpeg",
+    "liked_user_name": "liker1",
+    "liked_num": "378명",
+    "post_content": "춥지만 따수운 겨울 ❄️❄️❄️❄️"
+  },
+  {
+    "id": 3,
+    "user_img": "images/ohj/post_host_pic3.jpeg",
+    "user_name": "_esom",
+    "user_feed_pic": "images/ohj/post_pic3.jpeg",
+    "liked_user_pic": "images/ohj/like_pic.jpeg",
+    "liked_user_name": "liker2",
+    "liked_num": "27명",
+    "post_content": "집에 보내주세요"
+  },
+  {
+    "id": 4,
+    "user_img": "images/ohj/post_host_pic4.jpeg",
+    "user_name": "nanina_0",
+    "user_feed_pic": "images/ohj/post_pic4.jpeg",
+    "liked_user_pic": "images/ohj/like_pic.jpeg",
+    "liked_user_name": "liker3",
+    "liked_num": "46명",
+    "post_content": "안녕 디지몬 모두들 안녕"
+  }
+]
